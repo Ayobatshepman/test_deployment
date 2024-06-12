@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: deployment_test
+  name: deployment-test
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: deployment_test
+      app: deployment-test
   template:
     metadata:
       labels:
-        app: deployment_test
+        app: deployment-test
     spec:
       containers:
       - name: hello-world
-        image: gcr.io/ornate-genre-425416-q8/deployment_test:v3
+        image: gcr.io/ornate-genre-425416-q8/deployment-test:v3
         ports:
         - containerPort: 5000
