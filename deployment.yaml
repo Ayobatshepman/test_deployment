@@ -13,7 +13,7 @@ spec:
         app: deployment-test
     spec:
       containers:
-      - name: hello-world
+      - name: deployment-test
         image: gcr.io/ornate-genre-425416-q8/deployment-test:v3
         ports:
         - containerPort: 5000
