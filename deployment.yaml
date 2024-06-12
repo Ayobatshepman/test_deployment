@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: deplyment_test
+  name: deployment_test
 spec:
   replicas: 1
   selector:
