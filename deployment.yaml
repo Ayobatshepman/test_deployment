@@ -15,5 +15,5 @@ spec:
       containers:
       - name: deployment-test
         image: gcr.io/ornate-genre-425416-q8/deployment-test:v3
-        ports: 8080
+        ports: 
         - containerPort: 5000
