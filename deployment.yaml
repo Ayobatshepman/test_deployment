@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: deployment-test
-        image: gcr.io/ornate-genre-425416-q8/deployment-test:v3
+        image: gcr.io/custom-program-426214-s2/deployment_test:v1
         ports: 
         - containerPort: 5000
