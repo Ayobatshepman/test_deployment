@@ -21,54 +21,58 @@ from flasgger import Swagger, swag_from
 
 @swag_from({
     'tags': [
-        'Name'
+        'TagName'  # Replace with the name of the tag, e.g., 'User'
     ],
-    'summary': *'Summary of what the app does',
-    'description': *'Detailed description of what the endpoint does',
+    'summary': 'Summary of what the app does',  # Provide a brief summary of the endpoint
+    'description': 'Detailed description of what the endpoint does',  # Provide a detailed description of the endpoint
     'parameters': [
         {
-            'name': *'name of the input',
-            'in': 'query',
-            'type': *'is it interger, string, float',
-            'required': *is it required or not (True or False),
-            'description': *'decription of the input parameter'
+            'name': 'input_name',  # Replace with the name of the input parameter, e.g., 'user_id'
+            'in': 'query',  # Specify where the parameter is located (query, path, body, header)
+            'type': 'type',  # Specify the type of the parameter (integer, string, float)
+            'required': True,  # Specify if the parameter is required (True or False)
+            'description': 'Description of the input parameter'  # Provide a description of the input parameter
         }
     ],
     'responses': {
         200: {
-            'description': *'Description of the output',
+            'description': 'Description of the output',  # Provide a description of the successful output
             'schema': {
                 'type': 'object',
                 'properties': {
-                    *'name of the output': {
-                        'type': *'is it interger, string, float',
-                        'description': *'Description of the output'
+                    'output_name': {  # Replace with the name of the output field, e.g., 'user_name'
+                        'type': 'type',  # Specify the type of the output field (integer, string, float)
+                        'description': 'Description of the output'  # Provide a description of the output field
                     }
                 }
             },
             'examples': {
                 'application/json': {
-                    'pay_after_tax': 850
+                    'example_field': 'example_value'  # Replace with an example of the JSON response
                 }
             }
         },
         400: {
-            'description': 'Invalid input error',
+            'description': 'Invalid input error',  # Description of the 400 error response
             'schema': {
                 'type': 'object',
                 'properties': {
                     'error': {
                         'type': 'string',
-                        'description': 'Error message'
+                        'description': 'Error message'  # Description of the error message
                     }
                 }
             },
             'examples': {
                 'application/json': {
-                    'error': 'Invalid input. Please provide a valid integer for before_tax.'
+                    'error': 'Invalid input. Please provide a valid input.'  # Example error message
                 }
             }
         }
     }
 })
+def your_endpoint_function():
+    # Your endpoint implementation
+    pass
+
 ```
