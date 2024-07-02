@@ -2,7 +2,7 @@
 
 deploying a tax function
 
-## GCP deployment path
+### GCP deployment path
 
 1. first authenticate with docker: [gcloud auth configure-docker us-central1-docker.pkg.dev]
 2. [docker build -t us-central1-docker.pkg.dev/ayoba-183a7/gcf-artifacts/image-name:tag .]
@@ -14,3 +14,6 @@ deploying a tax function
 5. Check the status of your Pods
    - [kubectl get pods]
    - [kubectl get services]
+
+# Swagger set up
+
