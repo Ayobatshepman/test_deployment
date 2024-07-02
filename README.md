@@ -5,8 +5,8 @@ deploying a tax function
 ## GCP deployment path
 
 1. first authenticate with docker: [gcloud auth configure-docker us-central1-docker.pkg.dev]
-2. [docker build -t us-central1-docker.pkg.dev/ayoba-183a7/gcf-artifacts/user-churn-test-deploy:latest .]
-3. [docker push us-central1-docker.pkg.dev/ayoba-183a7/gcf-artifacts/user-churn-test-deploy:latest]
+2. [docker build -t us-central1-docker.pkg.dev/ayoba-183a7/gcf-artifacts/image-name:tag .]
+3. [docker push us-central1-docker.pkg.dev/ayoba-183a7/gcf-artifacts/image-name:tag]
 4. Apply the Deployment configuration:
    - [kubectl apply -f deployment.yaml] 
    - [kubectl apply -f service.yaml] 
