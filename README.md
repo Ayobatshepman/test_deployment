@@ -17,3 +17,57 @@ deploying a tax function
 
 # Swagger set up
 
+Packages: from flagger import Swagger, swag
+
+@swag_from({
+    'tags': [
+        'Calculator'
+    ],
+    'summary': 'Calculate net pay after tax',
+    'description': 'Endpoint to calculate the net pay after a 15% tax deduction from the provided salary before tax.',
+    'parameters': [
+        {
+            'name': 'before_tax',
+            'in': 'query',
+            'type': 'integer',
+            'required': True,
+            'description': 'Salary before tax'
+        }
+    ],
+    'responses': {
+        200: {
+            'description': 'Net pay after tax',
+            'schema': {
+                'type': 'object',
+                'properties': {
+                    'pay_after_tax': {
+                        'type': 'number',
+                        'description': 'Net pay after 15% tax deduction'
+                    }
+                }
+            },
+            'examples': {
+                'application/json': {
+                    'pay_after_tax': 850
+                }
+            }
+        },
+        400: {
+            'description': 'Invalid input error',
+            'schema': {
+                'type': 'object',
+                'properties': {
+                    'error': {
+                        'type': 'string',
+                        'description': 'Error message'
+                    }
+                }
+            },
+            'examples': {
+                'application/json': {
+                    'error': 'Invalid input. Please provide a valid integer for before_tax.'
+                }
+            }
+        }
+    }
+})
