@@ -16,33 +16,33 @@ deploying a tax function
    - [kubectl get services]
 
 # Swagger set up
-
-Packages: from flagger import Swagger, swag
+```
+from flasgger import Swagger, swag_from
 
 @swag_from({
     'tags': [
-        'Calculator'
+        'Name'
     ],
-    'summary': 'Calculate net pay after tax',
-    'description': 'Endpoint to calculate the net pay after a 15% tax deduction from the provided salary before tax.',
+    'summary': *'Summary of what the app does',
+    'description': *'Detailed description of what the endpoint does',
     'parameters': [
         {
-            'name': 'before_tax',
+            'name': *'name of the input',
             'in': 'query',
-            'type': 'integer',
-            'required': True,
-            'description': 'Salary before tax'
+            'type': *'is it interger, string, float',
+            'required': *is it required or not (True or False),
+            'description': *'decription of the input parameter'
         }
     ],
     'responses': {
         200: {
-            'description': 'Net pay after tax',
+            'description': *'Description of the output',
             'schema': {
                 'type': 'object',
                 'properties': {
-                    'pay_after_tax': {
-                        'type': 'number',
-                        'description': 'Net pay after 15% tax deduction'
+                    *'name of the output': {
+                        'type': *'is it interger, string, float',
+                        'description': *'Description of the output'
                     }
                 }
             },
@@ -71,3 +71,4 @@ Packages: from flagger import Swagger, swag
         }
     }
 })
+```
